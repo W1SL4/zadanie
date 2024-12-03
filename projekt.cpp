@@ -13,10 +13,15 @@ int main() {
 	    int liczba;
 	        cout << "Podaj liczbe calkowita: ";
 		    cin >> liczba;
-		        cout << "Podana liczba: " << liczba;
-			    if (czy_pierwsza(liczba)) {
-				            cout << " - liczba pierwsza" << endl;
-					        } else {
-							        cout << " - nie jest liczba pierwsza" << endl;
-								    }
-			        return 0}
+		        if (liczba <= 0) {
+				        cout << "Podana liczba nie jest dodatnia. Program konczy dzialanie." << endl;
+					        return 1;
+						    }
+			    cout << "Podana liczba: " << liczba;
+			        if (czy_pierwsza(liczba)) {
+					        cout << " - liczba pierwsza" << endl;
+						    } else {
+							            cout << " - nie jest liczba pierwsza" << endl;
+								        }
+				    return 0;
+			}
